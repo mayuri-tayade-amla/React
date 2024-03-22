@@ -1,12 +1,10 @@
 import React from 'react';
-import Accordians from './Accordians/Accordians';
-import Modal from'./Modal/Mymodal';
+import APidata from './Apidata.js/Apidata';
 
 function App(props) {
   return (
     <div>
-<Accordians/>
-<Modal/>
+<APidata/>
     </div>
   );
 }
