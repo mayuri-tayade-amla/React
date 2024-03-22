@@ -30,4 +30,4 @@ function APidata(){
      
     )
 }
-export default APidata
+export default APidata;
