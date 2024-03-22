@@ -1,12 +1,11 @@
 import React from 'react';
-import Accordians from './Accordians/Accordians';
-import Modal from'./Modal/Mymodal';
+import Counter from './Counter/Counter'
 
 function App(props) {
   return (
     <div>
-<Accordians/>
-<Modal/>
+<Counter/>
+
     </div>
   );
 }
