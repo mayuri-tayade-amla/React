@@ -11,8 +11,8 @@ function APidata(){
     return(
         <div className="grid grid-cols-3">
            
-               {records.map((list,index)=>(
-               <div className="flex m-5 ps-5 border-black ">
+               {records.map((list,id)=>(
+               <div className="flex m-5 ps-5 border-black" key={id}>
 
                 <div> Id:{list.id} 
                <div>name :{list.name} </div>
