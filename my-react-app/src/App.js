@@ -1,13 +1,11 @@
 import React from 'react';
-import Accordians from './Accordians/Accordians';
-import Modal from'./Modal/Mymodal';
-
-function App(props) {
+import Rating from './Rating/Rating';
+function App() {
   return (
     <div>
-<Accordians/>
-<Modal/>
+<Rating/> 
     </div>
+    
   );
 }
 
