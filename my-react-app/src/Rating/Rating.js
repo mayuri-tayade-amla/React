@@ -9,8 +9,8 @@ function Rating(){
              </div>
         {
        
-            totalStarList?.map((item, index)=>{
-                return <div className="pl-5"><FaStar onClick={()=>{
+            totalStarList.map((item, totalStarList)=>{
+                return <div className="pl-5" key={totalStarList}><FaStar onClick={()=>{
                     alert(item);
                 }}/> </div>
             })
