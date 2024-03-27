@@ -1,12 +1,9 @@
 import React from 'react';
-import Accordians from './Accordians/Accordians';
-import Modal from'./Modal/Mymodal';
-
-function App(props) {
+import Profilecard from './Profilecard/Profilecard';
+function App() {
   return (
     <div>
-<Accordians/>
-<Modal/>
+<Profilecard/>
     </div>
   );
 }
