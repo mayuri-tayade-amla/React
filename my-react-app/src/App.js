@@ -1,9 +1,10 @@
 import React from 'react';
-import Profilecard from './Profilecard/Profilecard';
+import Tabs from './Tabs/Tabs';
 function App() {
   return (
     <div>
-<Profilecard/>
+
+<Tabs/>
     </div>
   );
 }
