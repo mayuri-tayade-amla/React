@@ -3,14 +3,31 @@ import React, { useState } from "react";
 function Header() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const handlechange = (e) => {
-    setUsername(e.target.value);
+    checkEmailVal(e.target.value) && setUsername(e.target.value);
   };
-  const handlechange2 = (e) => {
-    setPassword(e.target.value);
+
+  const checkEmailVal = (email) => {
+    const emailres = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailres.test(email);
   };
+
+  const handlechangepassword = (e) => {
+    checkpass(e.target.value) && setPassword(e.target.value);
+  };
+  const checkpass = (password) => {
+    const passres =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/;
+    return passres.test(password);
+  };
+
   const handlelogin = (e) => {
-    alert(`Username: ${username} Password: ${password}`);
+    if (checkEmailVal(username) && checkpass(password)) {
+      alert(`Username: ${username} Password: ${password}`);
+    } else {
+      alert("Invalid email or password.");
+    }
   };
   return (
     <div className=" pl-5 box-content h-96 w-96 p-4 border-4">
@@ -29,7 +46,7 @@ function Header() {
           type="text"
           className="m-3 flow-root  border-b-4 border-indigo-200"
           placeholder="Type your password"
-          onChange={handlechange2}
+          onChange={handlechangepassword}
         ></input>
         <label className="flow-root text-right">Forgot Password?</label>
         <button
