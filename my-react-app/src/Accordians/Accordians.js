@@ -8,9 +8,9 @@ const Accordians =()=>{
         <div>
             <h1>Questions and Answers</h1>
         {
-           data.map((curElem)=>{
-            const {id} = curElem
-            return <Myaccordian key ={id} {...curElem}/>
+           data.map((questions,id)=>{
+         
+            return <Myaccordian  {...questions}/>
            })
         }
         </div>
